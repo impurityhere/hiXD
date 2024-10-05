@@ -1,0 +1,188 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    color: rgba(255, 255, 255, 0.9); 
+    overflow: hidden; 
+}
+
+.video-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    z-index: -1; 
+}
+
+#bg-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+
+.text-box {
+    position: relative;
+    z-index: 1; 
+    max-width: 800px; 
+    margin: 20px auto; 
+    padding: 20px; 
+    background-color: rgba(50, 50, 50, 0.5); 
+    border-radius: 10px; 
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.5); 
+}
+
+.text-box p {
+    line-height: 1.6; 
+}
+
+.text-box img {
+    display: block; 
+    margin: 0 auto 15px; 
+    border-radius: 10px; 
+    max-width: 30%; 
+    height: auto; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4); 
+}
+
+h1, h2 {
+    color: white; 
+}
+
+a {
+    display: inline-block; 
+    margin: 10px 0; 
+    padding: 10px 15px; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+
+.spotify-button,
+.github-button {
+    display: flex;
+    align-items: center; 
+    padding: 5px 10px; 
+    background-color: rgba(255, 255, 255, 0.2); 
+    color: #eaeaea; 
+    text-decoration: none; 
+    border-radius: 5px; 
+}
+.spotify-button img, .github-button img {
+    margin-right: 5px; 
+    height: 16px; 
+}
+
+.spotify-button:hover,
+.github-button:hover {
+    transform: scale(1.05); 
+    transition: transform 0.3s ease; 
+}
+.spotify-button,
+.github-button {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+}
+.spotify-button,
+.github-button {
+    position: relative; 
+    overflow: hidden; 
+}
+.spotify-button,
+.github-button {
+    position: relative; 
+}
+
+.spotify-button::after,
+.github-button::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 300%;
+    height: 300%;
+    background: rgba(255, 255, 255, 0.5);
+    border-radius: 50%; 
+    transform: translate(-50%, -50%) scale(0); 
+    transition: transform 0.5s ease; 
+    z-index: 0; 
+}
+
+.spotify-button:hover::after,
+.github-button:hover::after {
+    transform: translate(-50%, -50%) scale(1); 
+}
+
+.spotify-button:hover,
+.github-button:hover {
+    color: #1ed760; 
+}
+
+.spotify-button::before,
+.github-button::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(255, 255, 255, 0.6); 
+    transform: scale(0); 
+    transition: transform 0.3s; 
+    z-index: -1; 
+}
+
+.spotify-button:hover::before,
+.github-button:hover::before {
+    transform: scale(1); 
+}
+
+.spotify-button:hover,
+.github-button:hover {
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
+    transition: box-shadow 0.3s ease; 
+}
+
+.date-time {
+    position: absolute;
+    top: 5px;
+    left: 5px;
+    color: rgba(255, 255, 255, 0.8); 
+    font-size: 10px; 
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    z-index: 10; 
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.button-container {
+    display: flex; 
+    gap: 10px; 
+    margin-top: 20px; 
+}
+
+
+html {
+    scroll-behavior: smooth; 
+}
+
+
+.loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: white;
+    z-index: 9999; 
+}
+.text-box img:hover {
+    transform: scale(1.1); /* Zoom effect */
+    opacity: 0.8; /* Slightly dim */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
