@@ -62,7 +62,7 @@ a {
 }
 
 .spotify-button,
-.github-button {
+.github-button, .discord-button {
     display: flex;
     align-items: center; 
     padding: 5px 10px; 
@@ -71,32 +71,32 @@ a {
     text-decoration: none; 
     border-radius: 5px; 
 }
-.spotify-button img, .github-button img {
+.spotify-button img, .github-button img, .discord-button img{
     margin-right: 5px; 
     height: 16px; 
 }
 
 .spotify-button:hover,
-.github-button:hover {
+.github-button:hover, .discord-button:hover {
     transform: scale(1.05); 
     transition: transform 0.3s ease; 
 }
 .spotify-button,
-.github-button {
+.github-button, .discord-button {
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
 }
 .spotify-button,
-.github-button {
+.github-button, .discord-button{
     position: relative; 
     overflow: hidden; 
 }
 .spotify-button,
-.github-button {
+.github-button,.discord-button{
     position: relative; 
 }
 
 .spotify-button::after,
-.github-button::after {
+.github-button::after, .discord-button:after{
     content: '';
     position: absolute;
     top: 50%;
@@ -111,17 +111,17 @@ a {
 }
 
 .spotify-button:hover::after,
-.github-button:hover::after {
+.github-button:hover::after, .discord-button:hover::after{
     transform: translate(-50%, -50%) scale(1); 
 }
 
 .spotify-button:hover,
-.github-button:hover {
+.github-button:hover, .discord-button:hover{
     color: #1ed760; 
 }
 
 .spotify-button::before,
-.github-button::before {
+.github-button::before,.discord-button::before{
     content: '';
     position: absolute;
     top: 0;
@@ -135,12 +135,12 @@ a {
 }
 
 .spotify-button:hover::before,
-.github-button:hover::before {
+.github-button:hover::before,.discord-button:hover::before {
     transform: scale(1); 
 }
 
 .spotify-button:hover,
-.github-button:hover {
+.github-button:hover,.discord-button:hover {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); 
     transition: box-shadow 0.3s ease; 
 }
